@@ -14,8 +14,6 @@ st.set_page_config(page_title="Cricket Stats Hub", page_icon="🏏", layout="wid
 # ==========================================
 # 🔑 PASTE KEYS HERE
 # ==========================================
-GOOGLE_API_KEY = "AIzaSyDHLco-xULECac6l7qFM8QkgQwTYr5Svwo"
-MONGO_URI = "mongodb+srv://Sagnik_Bhattacharya:Sagnik@2007@cluster0.v5i6wna.mongodb.net/?appName=Cluster0"
 GEMINI_API_KEY = st.secrets["GOOGLE_API_KEY"]
 MONGO_URI = st.secrets["MONGO_URI"] 
 # ==========================================
@@ -163,4 +161,5 @@ if st.sidebar.button("Refresh"):
     if 'collection' in globals():
         items = list(collection.find().sort("timestamp", -1).limit(5))
         for i in items:
+
             st.sidebar.caption(f"{i['query']} - {i.get('source', 'Unknown')}")
