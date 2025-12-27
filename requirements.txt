@@ -1,8 +1,0 @@
-streamlit
-pandas
-pymongo
-requests
-duckduckgo-search
-wikipedia
-google-generativeai
-lxml
